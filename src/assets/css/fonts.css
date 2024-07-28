@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Hind';
+    src: url(../fonts/Hind-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Hind';
+    src: url(../fonts/Hind-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: 'Jura';
+    src: url(../fonts/Jura-VariableFont_wght.ttf);
+}

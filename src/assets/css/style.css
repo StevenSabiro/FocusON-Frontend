@@ -1,0 +1,56 @@
+@import url(./fonts.css);
+
+:root {
+    --first-font: 'Hind';
+    --second-font: 'Inter';
+    --third-font: 'Jura';
+    --color: #533B7A;
+    --bg: #DDE5F4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: var(--first-font);
+    color: var(--color);
+    background: var(--bg);
+    display: flex;
+    place-items: center;
+    place-content: center;
+    height: 100vh;
+}
+
+input, textarea, button {
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.container {
+    max-width: 1152px;
+    width: 100%;
+    padding: 0 12px;
+    margin: 0 auto;
+}
+
+.noSkill{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
