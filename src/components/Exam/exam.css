@@ -1,0 +1,62 @@
+.enter__btns{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.enter__content {
+	background: #f0f6fe;
+	border-radius: 23px;
+	padding: 10px 30px 40px 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.enter__img {
+	max-width: 120px;
+	width: 100%;
+	object-fit: cover;
+}
+
+.enter__info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 10px;
+	font-size: 25px;
+	margin-bottom: 40px;
+}
+
+.enter__luck {
+	text-align: center;
+}
+
+.enter__label {
+	font-size: 10px;
+	text-align: center;
+}
+
+.enter__input {
+	border: 1px solid #615b5b;
+	border-radius: 13px;
+	padding: 10px;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.enter__form {
+	display: flex;
+	flex-direction: column;
+}
+
+.enter__btn {
+	background: #665F90;
+	color: #f0f6fe;
+	border-radius: 13px;
+	padding: 10px;
+}

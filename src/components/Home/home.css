@@ -8,6 +8,12 @@
     border-radius: 9px;    
 }
 
+.btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .dashboard {
 	font-family: var(--third-font);
 	background: #f0f6fe;

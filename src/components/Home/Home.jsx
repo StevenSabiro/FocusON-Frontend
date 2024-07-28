@@ -3,8 +3,6 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import './home.css'
 
-export let global_data
-
 const Home = () => {
 	const [data, setData] = useState(null)
 	const [error, setError] = useState(null)
@@ -12,7 +10,6 @@ const Home = () => {
 	const [card, setCard] = useState('')
 
 	useEffect(() => {
-		global_data = data
 		const getStudentDashboard = async () => {
 			const token = localStorage.getItem('token') // Replace 'yourTokenKey' with the key you used to store the token
 			if (!token) {
@@ -118,9 +115,14 @@ const Home = () => {
 
 	return (
 		<div>
-			<Link to='/' onClick={handleLogout} className='logout'>
-				Log Out
-			</Link>
+			<div className='btns'>
+				<Link to='/' onClick={handleLogout} className='logout'>
+					Log Out
+				</Link>
+				<Link to='/exam' className='logout'>
+					Join Exam
+				</Link>
+			</div>
 			<div className='dashboard'>
 				<h1 className='dashboard__title'>Exams</h1>
 				<div className='dashboard__cards'>
