@@ -10,7 +10,7 @@ const Welcome = () => {
 			<img className='welcome__img' src={hi} alt='' />
 			<p className='welcome__desc'>
 				Unlock the gateway to your dreams with the pioneering platform that
-				turns aspirations into reality. - <strong>it’s in NoSkill</strong>
+				turns aspirations into reality. - <strong>it’s in FocusON</strong>
 			</p>
             <Link className='welcome__btn' to='/login'>Let's Explore</Link>
 		</div>
