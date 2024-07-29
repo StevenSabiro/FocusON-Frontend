@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate, useLocation } from 'react-router-dom'
+import './exam.css'
 
 const ExamPage = () => {
 	const { exam_id } = useParams()
@@ -49,6 +50,7 @@ const ExamPage = () => {
 	}
 
 	const handleSubmit = async () => {
+		console.log(answers)
 		setIsSubmitting(true)
 		const token = localStorage.getItem('token')
 		try {
@@ -64,12 +66,14 @@ const ExamPage = () => {
 				}
 			)
 
+            console.log(response)
+
 			if (!response.ok) {
 				throw new Error('Failed to submit exam')
 			}
 
 			alert('Exam submitted successfully!')
-			navigate('/') // Redirect to a different page after submission
+			// navigate('/') // Redirect to a different page after submission
 		} catch (error) {
 			console.error('Error submitting exam:', error)
 			alert('Error submitting exam')
@@ -83,26 +87,32 @@ const ExamPage = () => {
 	}
 
 	const { exam_name, questions } = examData
-
 	return (
-		<div className='exam__content'>
-			<h1>{exam_name}</h1>
-			<div className='questions'>
-				{Object.entries(questions).map(([questionId, questionDetails]) => (
-					<div key={questionId} className='question'>
-						<p>{questionDetails.text}</p>
-						<input
-							type='text'
-							onChange={e => handleAnswerChange(questionId, e.target.value)}
-							placeholder='Write your answer here'
-						/>
-					</div>
-				))}
+		<>
+			<h1 className='exam__title'>{exam_name}</h1>
+			<div className='exam__content'>
+				<div className='questions'>
+					{Object.entries(questions).map(([questionId, questionDetails]) => (
+						<div key={questionId} className='exam__card'>
+							<p className='exam__qs'>{questionDetails.text}</p>
+							<input
+								className='exam__input'
+								type='text'
+								onChange={e => handleAnswerChange(questionId, e.target.value)}
+								placeholder='Write your answer here'
+							/>
+						</div>
+					))}
+				</div>
+				<button
+					className='exam__submit'
+					onClick={handleSubmit}
+					disabled={isSubmitting}
+				>
+					{isSubmitting ? 'Submitting...' : 'Submit Exam'}
+				</button>
 			</div>
-			<button onClick={handleSubmit} disabled={isSubmitting}>
-				{isSubmitting ? 'Submitting...' : 'Submit Exam'}
-			</button>
-		</div>
+		</>
 	)
 }
 

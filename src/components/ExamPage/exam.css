@@ -1,0 +1,42 @@
+.exam__content {
+	padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.questions {
+    display: grid;
+	grid-template-columns: auto;
+	gap: 20px;
+}
+
+.exam__title {
+    margin-top: 30px;
+	font-size: 40px;
+	text-align: center;
+}
+
+.exam__card {
+	background: #f0f6fe;
+	padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.exam__submit{
+    font-size: 30px;
+    color: #f0f6fe;
+    background: #665f90;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.exam__input{
+    border-bottom: #665f90 1px solid;
+}
