@@ -62,7 +62,7 @@ const ExamPage = () => {
 						'Content-Type': 'application/json',
 						Authorization: `Token ${token}`,
 					},
-					body: JSON.stringify({ student_answers: answers.toLowerCase() }),
+					body: JSON.stringify({ student_answers: answers}),
 				}
 			)
 
