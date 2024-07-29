@@ -62,7 +62,7 @@ const ExamPage = () => {
 						'Content-Type': 'application/json',
 						Authorization: `Token ${token}`,
 					},
-					body: JSON.stringify({ student_answers: answers }),
+					body: JSON.stringify({ student_answers: answers.toLowerCase() }),
 				}
 			)
 
@@ -73,7 +73,7 @@ const ExamPage = () => {
 			}
 
 			alert('Exam submitted successfully!')
-			// navigate('/') // Redirect to a different page after submission
+			navigate('/home') // Redirect to a different page after submission
 		} catch (error) {
 			console.error('Error submitting exam:', error)
 			alert('Error submitting exam')

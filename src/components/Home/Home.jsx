@@ -100,7 +100,7 @@ const Home = () => {
 				<p className='card__mark'>
 					Score:{' '}
 					<strong>
-						{obj.student_mark} | {obj.full_mark}
+						{obj.student_mark} | 100
 					</strong>
 				</p>
 			</div>
